@@ -1,3 +1,4 @@
+install.packages('tidyverse')
 library(tidyverse)
 library(ggplot2)
 
@@ -7,5 +8,5 @@ View(gdc)
 gdc %>%
   filter(year == 2016) %>%
   ggplot(aes(state, pregnancyrate1519)) + 
-  geom_col()
+  geom_col(aes(color = 'red'))
   
